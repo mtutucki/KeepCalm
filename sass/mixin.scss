@@ -1,0 +1,6 @@
+@mixin backgroundImage ($bgUrl) {
+    background-image: $light-blue-gradient, url($bgUrl);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
