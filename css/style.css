@@ -201,6 +201,14 @@ body {
           transform: scaleX(1);
 }
 
+main .keep {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  background-color: #d3e0ea;
+}
+
 @media (min-width: 768px) {
   .header {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(17%, rgba(22, 135, 167, 0.6)), color-stop(80%, rgba(39, 102, 120, 0.6))), url("../img/header/background-1280.jpg");

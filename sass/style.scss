@@ -182,6 +182,17 @@ body {
 
 }
 
+// main
+main {
+
+    // first section - keep
+    .keep {
+        display: flex;
+        height: 100vh;
+        background-color: $grey;
+    }
+}
+
 
 
 
