@@ -17,10 +17,97 @@ html {
 body {
     font-family: 'Quicksand', sans-serif;
     color: $grey;
-    overflow: hidden;
 }
 
-// Header
+// nav
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-size: 3rem;
+    background-color: $grey;
+    padding: .5em .5em;
+    z-index: 1;
+
+    a {
+        text-decoration: none;
+        color: $black;
+        font-size: 2.4rem;
+    }
+
+    // wrapper for logo and burger button
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 .1em;
+
+        &-logo {
+            font-family: 'Train One', cursive;
+            padding: .1em .2em;
+        }
+
+        &-barsBtn {
+            background: none;
+            border: transparent;
+            font-size: 2.4rem;
+            padding: .1em;
+            cursor: pointer;
+
+            i {
+                padding: .1em .2em;
+            }
+        }
+    }
+
+    // links for mobile
+    &__links--mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-weight: bold;
+
+        // links shows before user click burger button
+        a {
+            padding: .1em .3em;
+            font-size: 0px;
+            transition: font-size .3s;
+        }
+
+        // delay of transition for second link
+        a:nth-child(2) {
+            transition-delay: .1s;
+        }
+
+        // delay of transition for third link
+        a:nth-child(3) {
+            transition-delay: .2s;
+        }
+
+        // delay of transition for fourth link
+        a:nth-child(4) {
+            transition-delay: .3s;
+        }
+
+    }
+
+    // shows menu after click burger button properties
+    &__links--mobile--active {
+        display: flex;
+
+        a {
+            font-size: 2rem;
+            padding: .1em .3em;
+        }
+    }
+
+
+
+
+
+}
+
+// header
 .header {
     display: flex;
     flex-direction: column;
@@ -39,33 +126,37 @@ body {
 
     }
 
+    // paragraph under g1
     &__text {
         padding-bottom: .4em;
         font-size: 1.8rem;
-        text-shadow: 1px 1px black;
+        text-shadow: 1px 1px $black;
     }
 
+    // calm button
     &__button {
         position: relative;
         margin-top: .4rem;
         padding: .6em 2.5em;
         font-size: 1.4rem;
-        color: black;
+        color: $black;
         background: $white;
         border: 2px solid $dim-blue;
         border-radius: 10px;
         text-transform: uppercase;
         letter-spacing: 2px;
         cursor: pointer;
-        z-index: 1;
         overflow: hidden;
         transition: border .3s, color .3s;
 
-
-
+        // change background color and set scaleX to 0
         &::before {
-            content: '';
+            content: 'calm';
             position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            vertical-align: -50%;
             top: 0;
             left: 0;
             width: 100%;
@@ -74,14 +165,15 @@ body {
             transform: scaleX(0);
             transform-origin: left;
             transition: transform .3s;
-            z-index: -1;
         }
 
+        // change border to transparent and font color to $grey
         &:hover {
             border: 2px solid transparent;
             color: $grey;
         }
 
+        // set scaleX t
         &:hover::before {
             transform: scaleX(1);
         }
@@ -89,6 +181,8 @@ body {
 
 
 }
+
+
 
 
 
@@ -125,7 +219,7 @@ body {
         }
 
         &__button {
-            font-size: 2.2rem;
+            font-size: 2rem;
             padding: .5em 2.5em;
         }
     }
