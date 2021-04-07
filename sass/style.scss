@@ -58,6 +58,10 @@ body {
                 padding: .1em .2em;
             }
         }
+
+        &-links--desktop {
+            display: none;
+        }
     }
 
     // links for mobile
@@ -215,6 +219,34 @@ main {
         &__button {
             font-size: 2.2rem;
             padding: .6em 2.5em;
+        }
+    }
+
+    .nav {
+        &__box {
+            padding: 0 1em;
+
+            a {
+                font-size: 3rem;
+            }
+
+            &-barsBtn {
+                display: none;
+            }
+
+            &-logo {
+                font-size: 8rem;
+            }
+
+            &-links--desktop {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+
+                a {
+                    padding: .1em .3em;
+                }
+            }
         }
     }
 }

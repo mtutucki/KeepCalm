@@ -63,6 +63,10 @@ body {
   padding: .1em .2em;
 }
 
+.nav__box-links--desktop {
+  display: none;
+}
+
 .nav__links--mobile {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,6 +227,33 @@ main .keep {
   .header__button {
     font-size: 2.2rem;
     padding: .6em 2.5em;
+  }
+  .nav__box {
+    padding: 0 1em;
+  }
+  .nav__box a {
+    font-size: 3rem;
+  }
+  .nav__box-barsBtn {
+    display: none;
+  }
+  .nav__box-logo {
+    font-size: 8rem;
+  }
+  .nav__box-links--desktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .nav__box-links--desktop a {
+    padding: .1em .3em;
   }
 }
 
