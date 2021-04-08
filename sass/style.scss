@@ -203,7 +203,6 @@ main {
     .keep {
         display: flex;
         flex-direction: column;
-        height: 100vh;
         width: 100%;
         color: $black;
 
@@ -225,6 +224,7 @@ main {
                 width: 100%;
                 height: 50vh;
                 @include backgroundImage('../img/sections/keep/strong/strong-640.jpg');
+                border-radius: 5px;
 
                 &-head {
                     position: absolute;
@@ -366,7 +366,39 @@ main {
 
 @media(min-width: 992px) {
 
+    main {
+        .keep {
+            &__emotion {
+                // padding: 0 3em;
+                display: flex;
+                flex-direction: row;
+                height: 50vh;
+                margin-bottom: 4em;
 
+                &-img {
+                    width: 45%;
+                    background-attachment: scroll;
+                    background-position-x: center;
+
+                    &-head {
+                        font-size: 8rem;
+                    }
+                }
+
+                &-text {
+                    display: flex;
+                    height: 100%;
+                    width: 55%;
+                    height: 100%;
+                    text-align: left;
+                    font-size: 3rem;
+                }
+
+
+            }
+
+        }
+    }
 
     .header {
         &__heading {
@@ -380,6 +412,14 @@ main {
         &__button {
             font-size: 2rem;
             padding: .5em 2.5em;
+        }
+    }
+
+    .nav {
+
+        // reset padding to wrap max width to 1200px
+        .nav__box {
+            padding: 0;
         }
     }
 }

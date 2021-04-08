@@ -230,7 +230,6 @@ main .keep {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
   width: 100%;
   color: #111111;
 }
@@ -266,6 +265,7 @@ main .keep__emotion-img {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  border-radius: 5px;
 }
 
 main .keep__emotion-img-head {
@@ -378,6 +378,35 @@ main .keep__emotion-img--proud {
 }
 
 @media (min-width: 992px) {
+  main .keep__emotion {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 50vh;
+    margin-bottom: 4em;
+  }
+  main .keep__emotion-img {
+    width: 45%;
+    background-attachment: scroll;
+    background-position-x: center;
+  }
+  main .keep__emotion-img-head {
+    font-size: 8rem;
+  }
+  main .keep__emotion-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    width: 55%;
+    height: 100%;
+    text-align: left;
+    font-size: 3rem;
+  }
   .header__heading {
     font-size: 8rem;
   }
@@ -387,6 +416,9 @@ main .keep__emotion-img--proud {
   .header__button {
     font-size: 2rem;
     padding: .5em 2.5em;
+  }
+  .nav .nav__box {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
