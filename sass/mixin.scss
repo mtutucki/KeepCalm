@@ -1,6 +1,14 @@
 @mixin backgroundImage ($bgUrl) {
     background-image: $light-blue-gradient, url($bgUrl);
+    background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
+}
+
+@mixin section-header {
+    font-family: 'Train One', cursive;
+    font-size: 3rem;
+    padding: .8em;
+    text-align: center;
+    letter-spacing: 2px;
 }

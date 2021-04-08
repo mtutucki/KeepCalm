@@ -13,7 +13,8 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    scroll-padding-top: 112px;
+    scroll-padding-top: 80px;
+    // overflow: hidden;
 }
 
 body {
@@ -34,7 +35,8 @@ body {
     a {
         text-decoration: none;
         color: $black;
-        font-size: 2.4rem;
+        font-size: 2.1rem;
+        text-transform: uppercase;
     }
 
     // wrapper for logo and burger button
@@ -81,7 +83,7 @@ body {
         }
 
         a:hover {
-            color: $black-hover;
+            color: $dim-blue;
         }
 
         // delay of transition for second link
@@ -139,8 +141,9 @@ body {
     // paragraph under g1
     &__text {
         padding-bottom: .4em;
-        font-size: 1.8rem;
+        font-size: 2.1rem;
         text-shadow: 1px 1px $black;
+        text-align: center;
     }
 
     // calm button
@@ -196,34 +199,65 @@ body {
 main {
     background-color: $grey;
 
-    // styles for every section header
-    .section-heading {
-        font-family: 'Train One', cursive;
-        font-size: 3.6rem;
-        padding: 1em;
-        text-align: center;
-        letter-spacing: 2px;
-    }
-
     // first section - keep
     .keep {
-
         display: flex;
         flex-direction: column;
-        height: 150vh;
+        height: 100vh;
+        width: 100%;
         color: $black;
 
-        &__emotion {
-            width: 100%;
-            font-size: 3rem;
-
-            
-
-
-
-
-
+        // Section header - KEEP 
+        &-section-heading {
+            @include section-header;
         }
+
+        // box of the img, text and heading of every "keep" emotion
+        &__emotion {
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+
+            // emotions photo
+            &-img {
+                display: flex;
+                position: relative;
+                width: 100%;
+                height: 50vh;
+                @include backgroundImage('../img/sections/keep/strong/strong-640.jpg');
+
+                &-head {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 6rem;
+                    text-transform: uppercase;
+                    letter-spacing: 5px;
+                    font-weight: bold;
+                    color: $grey;
+                    text-shadow: 2px 2px 30px $black;
+                }
+            }
+
+            &-text {
+                font-size: 2.1rem;
+                padding: 1em .7em;
+                justify-content: center;
+                text-align: center;
+                align-items: center
+            }
+        }
+
+
+
+
+    }
+
+    .keep__emotion-img--proud {
+        @include backgroundImage('../img/sections/keep/proud/proud-640.jpg');
+        // background-size: 50%;
+        // background-repeat: space;
     }
 }
 
@@ -239,22 +273,29 @@ main {
         background-image: $light-blue-gradient, url('../img/header/background-1280.jpg');
 
         &__heading {
-            font-size: 6rem;
+            font-size: 7rem;
         }
 
         &__text {
-            font-size: 3rem;
+            font-size: 4rem;
         }
 
         &__button {
-            font-size: 2.2rem;
-            padding: .6em 2.5em;
+            font-size: 2.8rem;
+            padding: .5em 2.5em;
         }
     }
 
     .nav {
+        .nav__links--mobile {
+            display: none;
+        }
+
         &__box {
             padding: 0 1em;
+
+
+
 
             a {
                 font-size: 3rem;
@@ -280,6 +321,7 @@ main {
                 a {
                     padding: .1em .3em;
                     transition: color .3s;
+                    font-size: 2.8rem;
                 }
 
                 a:hover {
@@ -289,9 +331,43 @@ main {
             }
         }
     }
+
+    main {
+        .keep {
+            &-section-heading {
+                font-size: 5rem;
+                padding: .6em;
+            }
+
+            &__emotion {
+
+                // Change resolution of pride emotions background
+                &-img {
+                    background-image: $light-blue-gradient, url('../img/sections/keep/strong/strong-1280.jpg');
+
+                    &-head {
+                        font-size: 10rem;
+                    }
+
+                }
+
+                &-text {
+                    font-size: 4rem;
+                }
+            }
+
+            .keep__emotion-img--proud {
+                background-image: $light-blue-gradient, url('../img/sections/keep/proud/proud-1280.jpg');
+            }
+
+        }
+    }
 }
 
 @media(min-width: 992px) {
+
+
+
     .header {
         &__heading {
             font-size: 8rem;

@@ -16,7 +16,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 112px;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -37,7 +37,8 @@ body {
 .nav a {
   text-decoration: none;
   color: #111111;
-  font-size: 2.4rem;
+  font-size: 2.1rem;
+  text-transform: uppercase;
 }
 
 .nav__box {
@@ -96,7 +97,7 @@ body {
 }
 
 .nav__links--mobile a:hover {
-  color: #aa0000;
+  color: #276678;
 }
 
 .nav__links--mobile a:nth-child(2) {
@@ -142,9 +143,9 @@ body {
   height: 100vh;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(17%, rgba(22, 135, 167, 0.6)), color-stop(80%, rgba(39, 102, 120, 0.6))), url("../img/header/background-640.jpg");
   background-image: linear-gradient(90deg, rgba(22, 135, 167, 0.6) 17%, rgba(39, 102, 120, 0.6) 80%), url("../img/header/background-640.jpg");
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   background-attachment: scroll;
 }
 
@@ -157,8 +158,9 @@ body {
 
 .header__text {
   padding-bottom: .4em;
-  font-size: 1.8rem;
+  font-size: 2.1rem;
   text-shadow: 1px 1px #111111;
+  text-align: center;
 }
 
 .header__button {
@@ -220,14 +222,6 @@ main {
   background-color: #d3e0ea;
 }
 
-main .section-heading {
-  font-family: 'Train One', cursive;
-  font-size: 3.6rem;
-  padding: 1em;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
 main .keep {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -236,13 +230,76 @@ main .keep {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 150vh;
+  height: 100vh;
+  width: 100%;
   color: #111111;
 }
 
-main .keep__emotion {
-  width: 100%;
+main .keep-section-heading {
+  font-family: 'Train One', cursive;
   font-size: 3rem;
+  padding: .8em;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+main .keep__emotion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 70vh;
+}
+
+main .keep__emotion-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(17%, rgba(22, 135, 167, 0.6)), color-stop(80%, rgba(39, 102, 120, 0.6))), url("../img/sections/keep/strong/strong-640.jpg");
+  background-image: linear-gradient(90deg, rgba(22, 135, 167, 0.6) 17%, rgba(39, 102, 120, 0.6) 80%), url("../img/sections/keep/strong/strong-640.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+main .keep__emotion-img-head {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: #d3e0ea;
+  text-shadow: 2px 2px 30px #111111;
+}
+
+main .keep__emotion-text {
+  font-size: 2.1rem;
+  padding: 1em .7em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .keep__emotion-img--proud {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(17%, rgba(22, 135, 167, 0.6)), color-stop(80%, rgba(39, 102, 120, 0.6))), url("../img/sections/keep/proud/proud-640.jpg");
+  background-image: linear-gradient(90deg, rgba(22, 135, 167, 0.6) 17%, rgba(39, 102, 120, 0.6) 80%), url("../img/sections/keep/proud/proud-640.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 @media (min-width: 768px) {
@@ -251,14 +308,17 @@ main .keep__emotion {
     background-image: linear-gradient(90deg, rgba(22, 135, 167, 0.6) 17%, rgba(39, 102, 120, 0.6) 80%), url("../img/header/background-1280.jpg");
   }
   .header__heading {
-    font-size: 6rem;
+    font-size: 7rem;
   }
   .header__text {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .header__button {
-    font-size: 2.2rem;
-    padding: .6em 2.5em;
+    font-size: 2.8rem;
+    padding: .5em 2.5em;
+  }
+  .nav .nav__links--mobile {
+    display: none;
   }
   .nav__box {
     padding: 0 1em;
@@ -292,9 +352,28 @@ main .keep__emotion {
     padding: .1em .3em;
     -webkit-transition: color .3s;
     transition: color .3s;
+    font-size: 2.8rem;
   }
   .nav__box-links--desktop a:hover {
     color: #1687a7;
+  }
+  main .keep-section-heading {
+    font-size: 5rem;
+    padding: .6em;
+  }
+  main .keep__emotion-img {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(17%, rgba(22, 135, 167, 0.6)), color-stop(80%, rgba(39, 102, 120, 0.6))), url("../img/sections/keep/strong/strong-1280.jpg");
+    background-image: linear-gradient(90deg, rgba(22, 135, 167, 0.6) 17%, rgba(39, 102, 120, 0.6) 80%), url("../img/sections/keep/strong/strong-1280.jpg");
+  }
+  main .keep__emotion-img-head {
+    font-size: 10rem;
+  }
+  main .keep__emotion-text {
+    font-size: 4rem;
+  }
+  main .keep .keep__emotion-img--proud {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(17%, rgba(22, 135, 167, 0.6)), color-stop(80%, rgba(39, 102, 120, 0.6))), url("../img/sections/keep/proud/proud-1280.jpg");
+    background-image: linear-gradient(90deg, rgba(22, 135, 167, 0.6) 17%, rgba(39, 102, 120, 0.6) 80%), url("../img/sections/keep/proud/proud-1280.jpg");
   }
 }
 
