@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'mixin';
+@import "components";
 
 *,
 *::before,
@@ -12,6 +13,7 @@
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+    scroll-padding-top: 112px;
 }
 
 body {
@@ -76,6 +78,10 @@ body {
             padding: .1em .3em;
             font-size: 0px;
             transition: font-size .3s;
+        }
+
+        a:hover {
+            color: $black-hover;
         }
 
         // delay of transition for second link
@@ -188,12 +194,36 @@ body {
 
 // main
 main {
+    background-color: $grey;
+
+    // styles for every section header
+    .section-heading {
+        font-family: 'Train One', cursive;
+        font-size: 3.6rem;
+        padding: 1em;
+        text-align: center;
+        letter-spacing: 2px;
+    }
 
     // first section - keep
     .keep {
+
         display: flex;
-        height: 100vh;
-        background-color: $grey;
+        flex-direction: column;
+        height: 150vh;
+        color: $black;
+
+        &__emotion {
+            width: 100%;
+            font-size: 3rem;
+
+            
+
+
+
+
+
+        }
     }
 }
 
@@ -234,8 +264,12 @@ main {
                 display: none;
             }
 
-            &-logo {
-                font-size: 8rem;
+            a {
+                transition: color .3s;
+            }
+
+            a:hover {
+                color: $dim-blue;
             }
 
             &-links--desktop {
@@ -245,6 +279,12 @@ main {
 
                 a {
                     padding: .1em .3em;
+                    transition: color .3s;
+                }
+
+                a:hover {
+                    color: $light-blue;
+
                 }
             }
         }

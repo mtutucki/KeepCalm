@@ -1,3 +1,9 @@
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
 *,
 *::before,
 *::after {
@@ -10,6 +16,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-padding-top: 112px;
 }
 
 body {
@@ -86,6 +93,10 @@ body {
   font-size: 0px;
   -webkit-transition: font-size .3s;
   transition: font-size .3s;
+}
+
+.nav__links--mobile a:hover {
+  color: #aa0000;
 }
 
 .nav__links--mobile a:nth-child(2) {
@@ -205,12 +216,33 @@ body {
           transform: scaleX(1);
 }
 
+main {
+  background-color: #d3e0ea;
+}
+
+main .section-heading {
+  font-family: 'Train One', cursive;
+  font-size: 3.6rem;
+  padding: 1em;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
 main .keep {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
-  background-color: #d3e0ea;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 150vh;
+  color: #111111;
+}
+
+main .keep__emotion {
+  width: 100%;
+  font-size: 3rem;
 }
 
 @media (min-width: 768px) {
@@ -237,8 +269,12 @@ main .keep {
   .nav__box-barsBtn {
     display: none;
   }
-  .nav__box-logo {
-    font-size: 8rem;
+  .nav__box a {
+    -webkit-transition: color .3s;
+    transition: color .3s;
+  }
+  .nav__box a:hover {
+    color: #276678;
   }
   .nav__box-links--desktop {
     display: -webkit-box;
@@ -254,6 +290,11 @@ main .keep {
   }
   .nav__box-links--desktop a {
     padding: .1em .3em;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+  }
+  .nav__box-links--desktop a:hover {
+    color: #1687a7;
   }
 }
 
