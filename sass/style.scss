@@ -213,7 +213,6 @@ main {
         &-section-heading {
             // import from mixin.scss
             @include section-header;
-            font-weight: normal;
         }
 
         // box of the img, text and heading of every "keep" emotion
@@ -301,6 +300,31 @@ main {
             width: 90%;
             margin: 0 auto;
         }
+
+    }
+
+    .calm {
+        display: flex;
+        color: $black;
+        flex-direction: column;
+
+        &__section-heading {
+            // import from mixin.scss
+            @include section-header;
+        }
+
+        &__card {
+            position: relative;
+            height: 30vh;
+        }
+
+
+
+
+
+
+
+
 
     }
 }

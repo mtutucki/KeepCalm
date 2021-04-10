@@ -358,6 +358,31 @@ main .hero-img hr {
   margin: 0 auto;
 }
 
+main .calm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #111111;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .calm__section-heading {
+  font-family: 'Train One', cursive;
+  font-size: 3rem;
+  padding: .8em;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+main .calm__card {
+  position: relative;
+  height: 30vh;
+}
+
 @media (min-width: 768px) {
   .nav .nav__links--mobile {
     display: none;
