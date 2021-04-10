@@ -14,7 +14,7 @@ html {
     // 10px
     font-size: 62.5%;
     scroll-behavior: smooth;
-    scroll-padding-top: 80px;
+    scroll-padding-top: 8rem;
     // overflow: hidden;
 }
 
@@ -203,6 +203,7 @@ main {
 
     // first section - keep
     .keep {
+        margin-bottom: 5rem;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -212,6 +213,7 @@ main {
         &-section-heading {
             // import from mixin.scss
             @include section-header;
+            font-weight: normal;
         }
 
         // box of the img, text and heading of every "keep" emotion
@@ -264,6 +266,42 @@ main {
                 align-items: center
             }
         }
+    }
+
+    // second section - hero img
+    .hero-img {
+        display: flex;
+        flex-direction: column;
+        @include backgroundImage('../img/sections/hero/hero-640.jpg');
+        height: 50vh;
+        width: 100%;
+        background-position-y: center;
+        text-align: center;
+        justify-content: center;
+        overflow: hidden;
+
+        &__title {
+            font-family: 'Train One', cursive;
+            font-size: 3.6rem;
+            text-transform: uppercase;
+            padding: .2em;
+        }
+
+        &__text {
+            font-size: 2.1rem;
+            padding: .4em;
+            transition: color .3s;
+        }
+
+        &__text:hover {
+            color: rgba(255, 255, 255, .6);
+        }
+
+        hr {
+            width: 90%;
+            margin: 0 auto;
+        }
+
     }
 }
 
@@ -341,6 +379,8 @@ main {
     }
 
     main {
+
+        // first section
         .keep {
             &-section-heading {
                 font-size: 5rem;
@@ -372,6 +412,22 @@ main {
                 background-image: $light-blue-gradient, url('../img/sections/keep/proud/proud-1280.jpg');
             }
 
+        }
+
+        // second section
+        .hero-img {
+            background-image: $light-blue-gradient, url('../img/sections/hero/hero-1280.jpg');
+            height: 50vh;
+
+            &__title {
+                font-size: 7rem;
+                padding: .4em;
+            }
+
+            &__text {
+                font-size: 4rem;
+                padding: .8em;
+            }
         }
     }
 }
@@ -447,6 +503,22 @@ main {
                 &--proud {
                     flex-direction: row-reverse;
                 }
+            }
+
+        }
+
+        // second section
+        .hero-img {
+            height: 60vh;
+
+            &__title {
+                font-size: 8rem;
+                padding: .5em;
+            }
+
+            &__text {
+                font-size: 3rem;
+                padding: 1em;
             }
         }
     }
