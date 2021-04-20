@@ -453,6 +453,7 @@ main {
 
         // actions after tap or hover a card
         &__card:hover {
+
             // rotate front 
             .calm__card-front {
                 transform: rotateY(-180deg);
@@ -600,15 +601,46 @@ main {
             }
         }
 
+        // calm section
         .calm {
-            justify-content: center;
+            padding: 0.6rem;
             width: 100%;
+            justify-content: center;
+            flex-direction: column;
 
-            &__card {
+            // set position of cards in tablet view
+            .wrapper {
                 display: flex;
-                flex-direction: row;
+                flex-wrap: wrap;
                 justify-content: center;
-                width: 30%;
+            }
+
+            // cards box - change width to 45% and fonts
+            &__card {
+                margin: 1em;
+                width: 45%;
+
+                &-front {
+                    &__head {
+                        top: 2rem;
+                        font-size: 4rem;
+                    }
+
+                    &__more-info {
+                        font-size: 2.4rem;
+                    }
+                }
+
+                &-back {
+                    &__head {
+                        top: 2rem;
+                        font-size: 4rem;
+                    }
+
+                    &__description {
+                        font-size: 2.2rem;
+                    }
+                }
             }
         }
 
