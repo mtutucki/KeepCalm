@@ -362,11 +362,13 @@ main .calm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #111111;
+  color: #f6f5f5;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
 }
 
 main .calm__section-heading {
@@ -376,11 +378,183 @@ main .calm__section-heading {
   text-align: center;
   letter-spacing: 2px;
   font-weight: normal;
+  color: #111111;
 }
 
 main .calm__card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  height: 30vh;
+  margin-bottom: 2rem;
+  height: 40vh;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+main .calm__card-front {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: rotateY(180);
+          transform: rotateY(180);
+  opacity: 1;
+  -webkit-transition: opacity .6s, -webkit-transform .6s;
+  transition: opacity .6s, -webkit-transform .6s;
+  transition: opacity .6s, transform .6s;
+  transition: opacity .6s, transform .6s, -webkit-transform .6s;
+}
+
+main .calm__card-front__head {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 2.1rem;
+}
+
+main .calm__card-front__more-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+main .calm__card-front--first {
+  background-size: cover;
+  background-position: center;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(17%, rgba(22, 135, 167, 0.7)), color-stop(80%, rgba(39, 102, 120, 0.7))), url("../img/sections/calm/pain/pain-640.jpg");
+  background-image: linear-gradient(90deg, rgba(22, 135, 167, 0.7) 17%, rgba(39, 102, 120, 0.7) 80%), url("../img/sections/calm/pain/pain-640.jpg");
+}
+
+main .calm__card-front--second {
+  background-size: cover;
+  background-position: center;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(17%, rgba(37, 22, 167, 0.7)), color-stop(80%, rgba(39, 120, 103, 0.7))), url("../img/sections/calm/fear/fear-640.jpg");
+  background-image: linear-gradient(90deg, rgba(37, 22, 167, 0.7) 17%, rgba(39, 120, 103, 0.7) 80%), url("../img/sections/calm/fear/fear-640.jpg");
+}
+
+main .calm__card-front--third {
+  background-size: cover;
+  background-position: center;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(17%, rgba(22, 167, 95, 0.7)), color-stop(80%, rgba(120, 39, 120, 0.7))), url("../img/sections/calm/loneliness/loneliness-640.jpg");
+  background-image: linear-gradient(90deg, rgba(22, 167, 95, 0.7) 17%, rgba(120, 39, 120, 0.7) 80%), url("../img/sections/calm/loneliness/loneliness-640.jpg");
+}
+
+main .calm__card-back {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  opacity: 0;
+  -webkit-transition: opacity .6s, -webkit-transform .6s;
+  transition: opacity .6s, -webkit-transform .6s;
+  transition: opacity .6s, transform .6s;
+  transition: opacity .6s, transform .6s, -webkit-transform .6s;
+}
+
+main .calm__card-back__head {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  font-size: 2.1rem;
+}
+
+main .calm__card-back__description {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2rem;
+}
+
+main .calm__card-back__description__item {
+  position: relative;
+  margin: .6em;
+  list-style: none;
+}
+
+main .calm__card-back__description hr {
+  margin: 0 auto;
+  width: 0%;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+
+main .calm__card-back--first {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(17%, #1687a7), color-stop(80%, #276678));
+  background-image: linear-gradient(90deg, #1687a7 17%, #276678 80%);
+}
+
+main .calm__card-back--second {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(17%, #2516a7), color-stop(80%, #277867));
+  background-image: linear-gradient(90deg, #2516a7 17%, #277867 80%);
+}
+
+main .calm__card-back--third {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(17%, #16a75f), color-stop(80%, #782778));
+  background-image: linear-gradient(90deg, #16a75f 17%, #782778 80%);
+}
+
+main .calm__card:hover .calm__card-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  opacity: 0;
+}
+
+main .calm__card:hover .calm__card-back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  opacity: 1;
+}
+
+main .calm__card:hover hr {
+  width: 60%;
 }
 
 @media (min-width: 768px) {
@@ -475,6 +649,25 @@ main .calm__card {
   main .hero-img__text {
     font-size: 4rem;
     padding: .8em;
+  }
+  main .calm {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  main .calm__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 30%;
   }
 }
 

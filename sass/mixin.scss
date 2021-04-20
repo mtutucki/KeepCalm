@@ -12,5 +12,9 @@
     text-align: center;
     letter-spacing: 2px;
     font-weight: normal;
+}
 
+@mixin card  {
+    background-size: cover;
+    background-position: center;
 }

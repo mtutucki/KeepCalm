@@ -7,5 +7,22 @@ $grey: #d3e0ea;
 $light-blue: #1687a7;
 $dim-blue: #276678;
 
-$light-blue-gradient: linear-gradient(90deg, rgba(22, 135, 167, .7) 17%, rgba(39, 102, 120, .7) 80%);
 $blue-gradient-img: radial-gradient(circle, rgba(39, 102, 120, 1) 33%, rgba(22, 135, 167, 1) 78%);
+
+$light-blue-gradient: linear-gradient(90deg, rgba(22, 135, 167, .7) 17%, rgba(39, 102, 120, .7) 80%);
+
+$second-calm-gradient: linear-gradient(90deg, rgba(37, 22, 167, 0.7) 17%, rgba(39, 120, 103, 0.7) 80%);
+
+$third-calm-gradient: linear-gradient(90deg, rgba(22, 167, 95, 0.7) 17%, rgba(120, 39, 120, 0.7) 80%);
+
+$light-blue-gradient--hover: linear-gradient(90deg, rgba(22, 135, 167, .9) 17%, rgba(39, 102, 120, .9) 80%);
+
+$second-calm-gradient--hover: linear-gradient(90deg, rgba(37, 22, 167, .9) 17%, rgba(39, 120, 103, .9) 80%);
+
+$third-calm-gradient--hover: linear-gradient(90deg, rgba(22, 167, 95, .9) 17%, rgba(120, 39, 120, .9) 80%);
+
+$light-blue-gradient-solid: linear-gradient(90deg, rgb(22, 135, 167) 17%, rgb(39, 102, 120) 80%);
+
+$second-calm-gradient-solid: linear-gradient(90deg, rgb(37, 22, 167) 17%, rgb(39, 120, 103) 80%);
+
+$third-calm-gradient-solid: linear-gradient(90deg, rgb(22, 167, 95) 17%, rgb(120, 39, 120) 80%);
