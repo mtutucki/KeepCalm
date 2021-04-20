@@ -736,5 +736,58 @@ main {
                 padding: 1em;
             }
         }
+
+        .calm {
+            padding: 0.6rem;
+            width: 100%;
+            justify-content: center;
+            flex-direction: column;
+
+            // set position of cards in tablet view
+            .wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            // cards box - change width to 45% and fonts
+            &__card {
+                margin: 1em;
+                width: 30%;
+
+                // front of the card
+                &-front {
+                    &__head {
+                        top: 1.2rem;
+                        font-size: 3rem;
+                    }
+
+                    &__more-info {
+                        font-size: 2.4rem;
+                    }
+                }
+
+                // back of the card 
+                &-back {
+                    &__head {
+                        top: 1.2rem;
+                        font-size: 3rem;
+                    }
+
+                    &__description {
+                        font-size: 2rem;
+
+
+                    }
+                }
+            }
+
+            // set underline to 75% width
+            &__card:hover {
+                hr {
+                    width: 75%;
+                }
+            }
+        }
     }
 }

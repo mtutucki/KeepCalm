@@ -761,5 +761,47 @@ main .calm__card:hover hr {
     font-size: 3rem;
     padding: 1em;
   }
+  main .calm {
+    padding: 0.6rem;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .calm .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .calm__card {
+    margin: 1em;
+    width: 30%;
+  }
+  main .calm__card-front__head {
+    top: 1.2rem;
+    font-size: 3rem;
+  }
+  main .calm__card-front__more-info {
+    font-size: 2.4rem;
+  }
+  main .calm__card-back__head {
+    top: 1.2rem;
+    font-size: 3rem;
+  }
+  main .calm__card-back__description {
+    font-size: 2rem;
+  }
+  main .calm__card:hover hr {
+    width: 75%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
