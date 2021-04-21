@@ -219,7 +219,9 @@ main {
         &__emotion {
             display: flex;
             flex-direction: column;
+            margin: 0 auto;
             height: auto;
+            width: 90%;
 
             // emotions photo
             &-img {
@@ -322,7 +324,9 @@ main {
         &__card {
             display: flex;
             position: relative;
+            margin: 0 auto;
             margin-bottom: 2rem;
+            width: 90%;
             height: 40vh;
             text-align: center;
             border-radius: 8px;
@@ -489,8 +493,8 @@ main {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 100%;
-            margin: 1rem 0;
+            width: 90%;
+            margin: 2rem auto;
 
             &__img {
                 width: 100%;
@@ -738,6 +742,23 @@ main {
                     }
                 }
             }
+        }
+
+        .therapy {
+            &__offers-box {
+                flex-direction: row;
+                width: 100%;
+
+                &__img {
+                    width: 40%;
+                }
+
+
+
+
+
+            }
+
         }
 
 

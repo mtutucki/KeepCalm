@@ -252,7 +252,9 @@ main .keep__emotion {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 0 auto;
   height: auto;
+  width: 90%;
 }
 
 main .keep__emotion-img {
@@ -386,7 +388,9 @@ main .calm__card {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  margin: 0 auto;
   margin-bottom: 2rem;
+  width: 90%;
   height: 40vh;
   text-align: center;
   border-radius: 8px;
@@ -593,8 +597,8 @@ main .therapy__offers-box {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
-  margin: 1rem 0;
+  width: 90%;
+  margin: 2rem auto;
 }
 
 main .therapy__offers-box__img {
@@ -808,6 +812,16 @@ main .therapy__offers-box__right__btn:hover {
   }
   main .calm__card-back__description {
     font-size: 2.2rem;
+  }
+  main .therapy__offers-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  main .therapy__offers-box__img {
+    width: 40%;
   }
 }
 
