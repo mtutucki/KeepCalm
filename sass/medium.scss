@@ -1,0 +1,211 @@
+@import 'colors';
+@import 'mixin';
+@import "components";
+
+.nav {
+
+    // disable mobile viev of nav
+    .nav__links--mobile {
+        display: none;
+    }
+
+    // box of nav
+    &__box {
+        padding: 0 1em;
+
+        // desktop links enable
+        &-links--desktop {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            // nav links
+            a {
+                padding: .1em .3em;
+                transition: color .3s;
+                font-size: 2.2rem;
+            }
+
+            // nav links hover
+            a:hover {
+                color: $light-blue;
+            }
+        }
+
+        a {
+            font-size: 2.5rem;
+        }
+
+        // hamburger btn
+        &-barsBtn {
+            display: none;
+        }
+
+        a {
+            transition: color .3s;
+        }
+
+        a:hover {
+            color: $dim-blue;
+        }
+
+    }
+}
+
+.header {
+    // Change header background resolution to higher
+    background-image: $light-blue-gradient, url('../img/header/background-1280.jpg');
+
+    // keep-calm h1
+    &__heading {
+        font-size: 7rem;
+    }
+
+    // text under h1
+    &__text {
+        font-size: 4rem;
+    }
+
+    // button keep calm
+    &__button {
+        font-size: 2.8rem;
+        padding: .5em 2.5em;
+    }
+}
+
+main {
+
+    // first section
+    .keep {
+        &-section-heading {
+            font-size: 5rem;
+            padding: .6em;
+        }
+
+        &__emotion {
+
+            // Change resolution of pride emotions background
+            &-img {
+                background-image: $light-blue-gradient, url('../img/sections/keep/strong/strong-1280.jpg');
+
+                &-head {
+                    font-size: 10rem;
+                }
+
+                &--proud {
+                    @include backgroundImage('../img/sections/keep/proud/proud-1280.jpg');
+                }
+
+            }
+
+            &-text {
+                font-size: 4rem;
+            }
+        }
+
+        .keep__emotion-img--proud {
+            background-image: $light-blue-gradient, url('../img/sections/keep/proud/proud-1280.jpg');
+        }
+
+    }
+
+    // second section
+    .hero-img {
+        background-image: $light-blue-gradient, url('../img/sections/hero/hero-1280.jpg');
+        height: 50vh;
+
+        &__title {
+            font-size: 7rem;
+            padding: .4em;
+        }
+
+        &__text {
+            font-size: 4rem;
+            padding: .8em;
+        }
+    }
+
+    // calm section
+    .calm {
+        padding: 0.6rem;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+
+        // set position of cards in tablet view
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__section-heading {
+            font-size: 5rem;
+            padding: .6em;
+        }
+
+        // cards box - change width to 45% and fonts
+        &__card {
+            margin: 1em;
+            width: 45%;
+
+            &--third {
+                margin: 4rem 0;
+            }
+
+            &-front {
+                &__head {
+                    top: 2rem;
+                    font-size: 4rem;
+                }
+
+                &__more-info {
+                    font-size: 2.4rem;
+                }
+            }
+
+            &-back {
+                &__head {
+                    top: 2rem;
+                    font-size: 4rem;
+                }
+
+                &__description {
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+
+    .therapy {
+
+        &__section-heading {
+            font-size: 5rem;
+            padding: .6em;
+        }
+
+        &__offers-box {
+            flex-direction: row;
+            width: 100%;
+
+            &__img {
+                width: 40%;
+            }
+
+            &__right {
+                &__text {
+                    font-size: 2.4rem;
+                }
+
+                &__btn {
+                    font-size: 2.2rem;
+                }
+
+
+            }
+        }
+
+    }
+
+
+}
