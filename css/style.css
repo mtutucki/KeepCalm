@@ -109,17 +109,39 @@ body {
 
 .nav__links--mobile a {
   top: 8vh;
-  padding: .3em .3em;
+  padding: .3em .2em;
+  font-size: 1.8rem;
   -webkit-transform: translateY(-300%);
           transform: translateY(-300%);
-  -webkit-transition: -webkit-transform .6s;
-  transition: -webkit-transform .6s;
-  transition: transform .6s;
-  transition: transform .6s, -webkit-transform .6s;
+  -webkit-transition: color .3s, -webkit-transform .6s;
+  transition: color .3s, -webkit-transform .6s;
+  transition: transform .6s, color .3s;
+  transition: transform .6s, color .3s, -webkit-transform .6s;
+}
+
+.nav__links--mobile a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1687a7;
+  height: 2px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.nav__links--mobile a:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .nav__links--mobile a:hover {
-  color: #276678;
+  color: #1687a7;
 }
 
 .nav__links--mobile--active {

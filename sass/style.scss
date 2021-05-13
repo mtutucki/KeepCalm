@@ -94,14 +94,33 @@ body {
         // links shows before user click burger button
         a {
             top: 8vh;
-            padding: .3em .3em;
+            padding: .3em .2em;
+            font-size: 1.8rem;
             transform: translateY(-300%);
-            transition: transform .6s;
+            transition: transform .6s, color .3s;
         }
 
-        // change link color on hover
+        // underline
+        a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: $light-blue;
+            height: 2px;
+            transition: .3s;
+            transform: scaleX(0);
+            transform-origin: center;
+        }
+
+        a:hover::before {
+            transform: scaleX(1);
+        }
+
+        // nav link hover
         a:hover {
-            color: $dim-blue;
+            color: $light-blue;
         }
     }
 
