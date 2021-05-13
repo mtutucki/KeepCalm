@@ -14,8 +14,7 @@ html {
     // 10px
     font-size: 62.5%;
     scroll-behavior: smooth;
-    scroll-padding-top: 8rem;
-    // overflow: hidden;
+    overflow-x: hidden;
 }
 
 body {
@@ -76,6 +75,7 @@ body {
         flex-direction: column;
         align-items: flex-start;
         font-weight: bold;
+        width: 100%;
 
         // links shows before user click burger button
         a {
@@ -108,10 +108,14 @@ body {
     // shows menu after click burger button properties
     &__links--mobile--active {
         display: flex;
+        background-color: $grey;
+        width: 100vw;
 
         a {
             font-size: 2rem;
             padding: .1em .3em;
+            text-align: center;
+
         }
     }
 
@@ -203,7 +207,7 @@ main {
 
     // first section - keep
     .keep {
-        margin-bottom: 5rem;
+
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -256,7 +260,7 @@ main {
 
             // if hover img  than it's 5 percent bigger
             &-img:hover {
-                transform: scale(1.05);
+                transform: scale(.95);
             }
 
             // text below img
@@ -264,7 +268,11 @@ main {
                 font-size: 2.1rem;
                 padding: 1em 1.3em;
                 justify-content: center;
-                align-items: center
+                align-items: center;
+
+                &--proud {
+                    margin-bottom: 1.5rem;
+                }
             }
         }
     }
@@ -331,6 +339,18 @@ main {
             text-align: center;
             border-radius: 8px;
             cursor: pointer;
+
+            &--second {
+                margin: 3rem auto;
+            }
+
+            &--third {
+                margin-bottom: 3rem;
+            }
+
+
+
+
 
             // front of the card before hover 
             &-front {
@@ -494,7 +514,15 @@ main {
             flex-direction: column;
             justify-content: center;
             width: 90%;
-            margin: 2rem auto;
+            margin: .8rem auto;
+
+            &--middle {
+                margin: 3rem auto;
+            }
+
+            &--last {
+                margin-bottom: 3rem;
+            }
 
             &__img {
                 width: 100%;
@@ -599,7 +627,7 @@ main {
                 a {
                     padding: .1em .3em;
                     transition: color .3s;
-                    font-size: 2.8rem;
+                    font-size: 2.2rem;
                 }
 
                 // nav links hover
@@ -609,7 +637,7 @@ main {
             }
 
             a {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
 
             // hamburger btn
@@ -715,10 +743,19 @@ main {
                 justify-content: center;
             }
 
+            &__section-heading {
+                font-size: 5rem;
+                padding: .6em;
+            }
+
             // cards box - change width to 45% and fonts
             &__card {
                 margin: 1em;
                 width: 45%;
+
+                &--third {
+                    margin: 4rem 0;
+                }
 
                 &-front {
                     &__head {
@@ -745,6 +782,12 @@ main {
         }
 
         .therapy {
+
+            &__section-heading {
+                font-size: 5rem;
+                padding: .6em;
+            }
+
             &__offers-box {
                 flex-direction: row;
                 width: 100%;
@@ -753,10 +796,17 @@ main {
                     width: 40%;
                 }
 
+                &__right {
+                    &__text {
+                        font-size: 2.4rem;
+                    }
+
+                    &__btn {
+                        font-size: 2.2rem;
+                    }
 
 
-
-
+                }
             }
 
         }
@@ -856,9 +906,11 @@ main {
         }
 
         .calm {
+            display: flex;
             padding: 0.6rem;
             width: 100%;
             justify-content: center;
+            align-items: center;
             flex-direction: column;
 
             // set position of cards in tablet view

@@ -16,7 +16,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 8rem;
+  overflow-x: hidden;
 }
 
 body {
@@ -87,6 +87,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   font-weight: bold;
+  width: 100%;
 }
 
 .nav__links--mobile a {
@@ -119,11 +120,14 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #d3e0ea;
+  width: 100vw;
 }
 
 .nav__links--mobile--active a {
   font-size: 2rem;
   padding: .1em .3em;
+  text-align: center;
 }
 
 .header {
@@ -223,7 +227,6 @@ main {
 }
 
 main .keep {
-  margin-bottom: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -299,8 +302,8 @@ main .keep__emotion-img--proud {
 }
 
 main .keep__emotion-img:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 main .keep__emotion-text {
@@ -312,6 +315,10 @@ main .keep__emotion-text {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+main .keep__emotion-text--proud {
+  margin-bottom: 1.5rem;
 }
 
 main .hero-img {
@@ -395,6 +402,14 @@ main .calm__card {
   text-align: center;
   border-radius: 8px;
   cursor: pointer;
+}
+
+main .calm__card--second {
+  margin: 3rem auto;
+}
+
+main .calm__card--third {
+  margin-bottom: 3rem;
 }
 
 main .calm__card-front {
@@ -598,7 +613,15 @@ main .therapy__offers-box {
       -ms-flex-pack: center;
           justify-content: center;
   width: 90%;
-  margin: 2rem auto;
+  margin: .8rem auto;
+}
+
+main .therapy__offers-box--middle {
+  margin: 3rem auto;
+}
+
+main .therapy__offers-box--last {
+  margin-bottom: 3rem;
 }
 
 main .therapy__offers-box__img {
@@ -704,13 +727,13 @@ main .therapy__offers-box__right__btn:hover {
     padding: .1em .3em;
     -webkit-transition: color .3s;
     transition: color .3s;
-    font-size: 2.8rem;
+    font-size: 2.2rem;
   }
   .nav__box-links--desktop a:hover {
     color: #1687a7;
   }
   .nav__box a {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .nav__box-barsBtn {
     display: none;
@@ -795,9 +818,16 @@ main .therapy__offers-box__right__btn:hover {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  main .calm__section-heading {
+    font-size: 5rem;
+    padding: .6em;
+  }
   main .calm__card {
     margin: 1em;
     width: 45%;
+  }
+  main .calm__card--third {
+    margin: 4rem 0;
   }
   main .calm__card-front__head {
     top: 2rem;
@@ -813,6 +843,10 @@ main .therapy__offers-box__right__btn:hover {
   main .calm__card-back__description {
     font-size: 2.2rem;
   }
+  main .therapy__section-heading {
+    font-size: 5rem;
+    padding: .6em;
+  }
   main .therapy__offers-box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -822,6 +856,12 @@ main .therapy__offers-box__right__btn:hover {
   }
   main .therapy__offers-box__img {
     width: 40%;
+  }
+  main .therapy__offers-box__right__text {
+    font-size: 2.4rem;
+  }
+  main .therapy__offers-box__right__btn {
+    font-size: 2.2rem;
   }
 }
 
@@ -896,11 +936,17 @@ main .therapy__offers-box__right__btn:hover {
     padding: 1em;
   }
   main .calm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding: 0.6rem;
     width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
