@@ -1,0 +1,156 @@
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.nav__box {
+  padding: 0 auto;
+}
+
+.header__heading {
+  font-size: 5rem;
+}
+
+.header__text {
+  font-size: 3rem;
+}
+
+.header__button {
+  margin-top: .5em;
+  font-size: 2rem;
+}
+
+main .keep__emotion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: auto;
+  margin-bottom: 4em;
+}
+
+main .keep__emotion-img {
+  width: 40%;
+  height: 40vh;
+  background-attachment: scroll;
+  background-position-x: center;
+  margin: 0 1em;
+}
+
+main .keep__emotion-img-head {
+  font-size: 8rem;
+}
+
+main .keep__emotion-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: auto;
+  width: 60%;
+  padding-left: 5rem;
+  padding-right: .4em;
+  text-align: left;
+  font-size: 3rem;
+}
+
+main .keep__emotion-text--proud {
+  padding-right: 5rem;
+  padding-left: .4em;
+}
+
+main .keep__emotion--proud {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+main .hero-img {
+  height: 60vh;
+}
+
+main .hero-img__title {
+  font-size: 8rem;
+  padding: .5em;
+}
+
+main .hero-img__text {
+  font-size: 3rem;
+  padding: 1em;
+}
+
+main .calm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.6rem;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+main .calm .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .calm__card {
+  margin: 1em;
+  width: 30%;
+  margin-bottom: 4.1rem;
+}
+
+main .calm__card-front__head {
+  top: 1.2rem;
+  font-size: 3rem;
+}
+
+main .calm__card-front__more-info {
+  font-size: 2.4rem;
+}
+
+main .calm__card-back__head {
+  top: 1.2rem;
+  font-size: 3rem;
+}
+
+main .calm__card-back__description {
+  font-size: 2rem;
+}
+
+main .calm__card:hover hr {
+  width: 75%;
+}
+
+main .therapy__offers-box {
+  height: 30vh;
+}
+
+main .therapy__offers-box__img {
+  width: 40%;
+  height: 30vh;
+}
+/*# sourceMappingURL=large.css.map */
