@@ -15,28 +15,35 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    scroll-padding-top: 7.9vh;
 }
 
 body {
     font-family: 'Quicksand', sans-serif;
     color: $grey;
+    overflow: hidden;
 }
 
 // nav
 .nav {
     // always on top
     position: fixed;
-    width: 100%;
     top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em .5em;
+    width: 100%;
+    height: 8vh;
     font-size: 3rem;
     background-color: $grey;
-    padding: .5em .5em;
-    z-index: 1;
+    z-index: 20;
 
+    // nav links
     a {
         text-decoration: none;
         color: $black;
-        font-size: 2.1rem;
+        font-size: 2rem;
         text-transform: uppercase;
     }
 
@@ -47,82 +54,87 @@ body {
         align-items: center;
         padding: 0 .1em;
 
+        // desktop viev disable
+        &-links--desktop {
+            display: none;
+        }
+
         &-logo {
             font-family: 'Train One', cursive;
-            padding: .1em .2em;
+            font-size: 2.4rem;
+            padding: .1em .3em;
         }
 
         &-barsBtn {
             background: none;
             border: transparent;
             font-size: 2.4rem;
-            padding: .1em;
             cursor: pointer;
 
             i {
-                padding: .1em .2em;
+                padding: .1em .3em;
             }
-        }
-
-        &-links--desktop {
-            display: none;
         }
     }
 
     // links for mobile
     &__links--mobile {
+        position: fixed;
+        top: 8vh;
+        left: 0;
         display: flex;
-        flex-direction: column;
+        justify-content: center;
         align-items: flex-start;
-        font-weight: bold;
+        height: 0vh;
         width: 100%;
+        background-color: $grey;
+        transition: height .6s;
 
         // links shows before user click burger button
         a {
-            padding: .1em .3em;
-            font-size: 0px;
-            transition: font-size .3s;
+            top: 8vh;
+            padding: .3em .3em;
+            font-size: 1.6rem;
+            transform: translateY(-300%);
+            transition: transform .6s, color .3s;
         }
 
+        // underline
+        a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: $light-blue;
+            height: 2px;
+            transition: .3s;
+            transform: scaleX(0);
+            transform-origin: center;
+        }
+
+        a:hover::before {
+            transform: scaleX(1);
+        }
+
+        // nav link hover
         a:hover {
-            color: $dim-blue;
+            color: $light-blue;
         }
-
-        // delay of transition for second link
-        a:nth-child(2) {
-            transition-delay: .1s;
-        }
-
-        // delay of transition for third link
-        a:nth-child(3) {
-            transition-delay: .2s;
-        }
-
-        // delay of transition for fourth link
-        a:nth-child(4) {
-            transition-delay: .3s;
-        }
-
     }
 
     // shows menu after click burger button properties
     &__links--mobile--active {
         display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: $grey;
-        width: 100vw;
+        height: 8vh;
 
         a {
-            font-size: 2rem;
-            padding: .1em .3em;
-            text-align: center;
-
+            transform: translateY(0);
         }
     }
-
-
-
-
-
 }
 
 // header
@@ -138,16 +150,15 @@ body {
     //h1 - KEEP CALM
     &__heading {
         padding: .2em 0;
-        font-size: 3.6rem;
+        font-size: 3rem;
         font-family: 'Train One', cursive;
         text-transform: uppercase;
-
     }
 
     // paragraph under g1
     &__text {
         padding-bottom: .4em;
-        font-size: 2.1rem;
+        font-size: 2rem;
         text-shadow: 1px 1px $black;
         text-align: center;
     }
@@ -161,7 +172,7 @@ body {
         color: $black;
         background: $white;
         border: 2px solid $dim-blue;
-        border-radius: 10px;
+        border-radius: 8px;
         text-transform: uppercase;
         letter-spacing: 2px;
         cursor: pointer;
@@ -192,13 +203,11 @@ body {
             color: $grey;
         }
 
-        // set scaleX t
+        // set scaleX to 1
         &:hover::before {
             transform: scaleX(1);
         }
     }
-
-
 }
 
 // main
@@ -207,7 +216,6 @@ main {
 
     // first section - keep
     .keep {
-
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -234,7 +242,7 @@ main {
                 width: 100%;
                 height: 50vh;
                 @include backgroundImage('../img/sections/keep/strong/strong-640.jpg');
-                border-radius: 5px;
+                border-radius: 8px;
                 transition: transform .5s;
 
                 // emotions text inside img
@@ -243,7 +251,7 @@ main {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    font-size: 6rem;
+                    font-size: 5rem;
                     color: $grey;
                     font-weight: bold;
                     letter-spacing: 5px;
@@ -265,14 +273,13 @@ main {
 
             // text below img
             &-text {
+                display: flex;
+                width: 100%;
                 font-size: 2.1rem;
-                padding: 1em 1.3em;
+                padding: .7em;
+                padding-bottom: 1em;
                 justify-content: center;
                 align-items: center;
-
-                &--proud {
-                    margin-bottom: 1.5rem;
-                }
             }
         }
     }
@@ -499,37 +506,45 @@ main {
         }
     }
 
+    // therapy section
     .therapy {
         @include backgroundImage("../img/sections/therapy/background/therapy-bgc-640.jpg");
         background-attachment: fixed;
         display: flex;
         flex-direction: column;
 
+        // head
         &__section-heading {
             @include section-header;
         }
 
+        // box 
         &__offers-box {
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 90%;
-            margin: .8rem auto;
+            margin: 0 auto;
 
+            // second offer
             &--middle {
                 margin: 3rem auto;
             }
 
+            // last offer
             &--last {
                 margin-bottom: 3rem;
             }
 
+            // img inside box
             &__img {
+                height: 30vh;
                 width: 100%;
                 filter: grayscale(100%);
                 box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
             }
 
+            // text under photo - on right after 768px breakpoint
             &__right {
                 display: flex;
                 flex-direction: column;
@@ -538,6 +553,7 @@ main {
                 background-color: $grey;
                 color: $black;
 
+                // name of offer
                 &__head {
                     font-size: 3rem;
                     text-align: center;
@@ -545,11 +561,13 @@ main {
                     text-transform: uppercase;
                 }
 
+                // text inside offer
                 &__text {
                     font-size: 2rem;
                     padding: .45em;
                 }
 
+                // button to order
                 &__btn {
                     position: relative;
                     background-color: $light-blue;
@@ -564,8 +582,8 @@ main {
                     z-index: 10;
                     overflow: hidden;
                     transition: color .6s;
-
                 }
+
 
                 &__btn::before {
                     position: absolute;
@@ -587,374 +605,6 @@ main {
 
                 &__btn:hover {
                     color: $white;
-                }
-
-
-
-
-            }
-
-
-        }
-
-
-    }
-
-
-
-}
-
-// MEDIA
-@media(min-width: 768px) {
-    .nav {
-
-        // disable mobile viev of nav
-        .nav__links--mobile {
-            display: none;
-        }
-
-        // box of nav
-        &__box {
-            padding: 0 1em;
-
-            // desktop links enable
-            &-links--desktop {
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-
-                // nav links
-                a {
-                    padding: .1em .3em;
-                    transition: color .3s;
-                    font-size: 2.2rem;
-                }
-
-                // nav links hover
-                a:hover {
-                    color: $light-blue;
-                }
-            }
-
-            a {
-                font-size: 2.5rem;
-            }
-
-            // hamburger btn
-            &-barsBtn {
-                display: none;
-            }
-
-            a {
-                transition: color .3s;
-            }
-
-            a:hover {
-                color: $dim-blue;
-            }
-
-        }
-    }
-
-    .header {
-        // Change header background resolution to higher
-        background-image: $light-blue-gradient, url('../img/header/background-1280.jpg');
-
-        // keep-calm h1
-        &__heading {
-            font-size: 7rem;
-        }
-
-        // text under h1
-        &__text {
-            font-size: 4rem;
-        }
-
-        // button keep calm
-        &__button {
-            font-size: 2.8rem;
-            padding: .5em 2.5em;
-        }
-    }
-
-    main {
-
-        // first section
-        .keep {
-            &-section-heading {
-                font-size: 5rem;
-                padding: .6em;
-            }
-
-            &__emotion {
-
-                // Change resolution of pride emotions background
-                &-img {
-                    background-image: $light-blue-gradient, url('../img/sections/keep/strong/strong-1280.jpg');
-
-                    &-head {
-                        font-size: 10rem;
-                    }
-
-                    &--proud {
-                        @include backgroundImage('../img/sections/keep/proud/proud-1280.jpg');
-                    }
-
-                }
-
-                &-text {
-                    font-size: 4rem;
-                }
-            }
-
-            .keep__emotion-img--proud {
-                background-image: $light-blue-gradient, url('../img/sections/keep/proud/proud-1280.jpg');
-            }
-
-        }
-
-        // second section
-        .hero-img {
-            background-image: $light-blue-gradient, url('../img/sections/hero/hero-1280.jpg');
-            height: 50vh;
-
-            &__title {
-                font-size: 7rem;
-                padding: .4em;
-            }
-
-            &__text {
-                font-size: 4rem;
-                padding: .8em;
-            }
-        }
-
-        // calm section
-        .calm {
-            padding: 0.6rem;
-            width: 100%;
-            justify-content: center;
-            flex-direction: column;
-
-            // set position of cards in tablet view
-            .wrapper {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            &__section-heading {
-                font-size: 5rem;
-                padding: .6em;
-            }
-
-            // cards box - change width to 45% and fonts
-            &__card {
-                margin: 1em;
-                width: 45%;
-
-                &--third {
-                    margin: 4rem 0;
-                }
-
-                &-front {
-                    &__head {
-                        top: 2rem;
-                        font-size: 4rem;
-                    }
-
-                    &__more-info {
-                        font-size: 2.4rem;
-                    }
-                }
-
-                &-back {
-                    &__head {
-                        top: 2rem;
-                        font-size: 4rem;
-                    }
-
-                    &__description {
-                        font-size: 2.2rem;
-                    }
-                }
-            }
-        }
-
-        .therapy {
-
-            &__section-heading {
-                font-size: 5rem;
-                padding: .6em;
-            }
-
-            &__offers-box {
-                flex-direction: row;
-                width: 100%;
-
-                &__img {
-                    width: 40%;
-                }
-
-                &__right {
-                    &__text {
-                        font-size: 2.4rem;
-                    }
-
-                    &__btn {
-                        font-size: 2.2rem;
-                    }
-
-
-                }
-            }
-
-        }
-
-
-    }
-}
-
-@media(min-width: 992px) {
-
-    // reset padding to wrap max width to 1200px
-    .nav {
-        &__box {
-            padding: 0;
-        }
-    }
-
-    // change font sizes of header elements
-    .header {
-        &__heading {
-            font-size: 8rem;
-        }
-
-        &__text {
-            font-size: 4rem;
-        }
-
-        &__button {
-            font-size: 2rem;
-            padding: .5em 2.5em;
-        }
-    }
-
-    // main
-    main {
-
-        // first section keep
-        .keep {
-            &__emotion {
-                // padding: 0 3em;
-                display: flex;
-                flex-direction: row;
-                height: auto;
-                margin-bottom: 4em;
-
-                // img 
-                &-img {
-                    width: 40%;
-                    height: 40vh;
-                    background-attachment: scroll;
-                    background-position-x: center;
-                    margin: 0 1em;
-
-                    &-head {
-                        font-size: 8rem;
-                    }
-                }
-
-                // text next to img
-                &-text {
-                    display: flex;
-                    align-items: center;
-                    height: auto;
-                    width: 60%;
-                    padding-left: 5rem;
-                    padding-right: .4em;
-                    text-align: left;
-                    font-size: 3rem;
-
-                    &--proud {
-                        padding-right: 5rem;
-                        padding-left: .4em;
-                    }
-                }
-
-                // set proud photo on right side
-                &--proud {
-                    flex-direction: row-reverse;
-                }
-            }
-
-        }
-
-        // second section
-        .hero-img {
-            height: 60vh;
-
-            &__title {
-                font-size: 8rem;
-                padding: .5em;
-            }
-
-            &__text {
-                font-size: 3rem;
-                padding: 1em;
-            }
-        }
-
-        .calm {
-            display: flex;
-            padding: 0.6rem;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-
-            // set position of cards in tablet view
-            .wrapper {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            // cards box - change width to 45% and fonts
-            &__card {
-                margin: 1em;
-                width: 30%;
-                margin-bottom: 4.1rem;
-
-                // front of the card
-                &-front {
-                    &__head {
-                        top: 1.2rem;
-                        font-size: 3rem;
-                    }
-
-                    &__more-info {
-                        font-size: 2.4rem;
-                    }
-                }
-
-                // back of the card 
-                &-back {
-                    &__head {
-                        top: 1.2rem;
-                        font-size: 3rem;
-                    }
-
-                    &__description {
-                        font-size: 2rem;
-                    }
-                }
-            }
-
-            // set underline to 75% width
-            &__card:hover {
-                hr {
-                    width: 75%;
                 }
             }
         }

@@ -18,6 +18,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
     <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" media="screen and (min-width:768px)" href="css/medium.css">
+    <link rel="stylesheet" media="screen and (min-width:992px)" href="css/large.css">
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/227e7616bf.js" crossorigin="anonymous"></script>
 </head>
@@ -54,7 +56,7 @@
     <header id="header" class="header">
         <h1 class="header__heading">keep calm</h1>
         <p class="header__text">Always try to keep calm yourself</p>
-        <button class="header__button">keep</button>
+        <a href="#keep"><button class="header__button">keep</button></a>
     </header>
 
     <!-- main -->
@@ -89,7 +91,7 @@
         </section>
         <!-- third section calm -->
         <section class="calm" id="calm">
-            <div class="calm__section-heading">CALM</div>
+            <h2 class="calm__section-heading">CALM</h2>
             <!-- wrapper for calm section -->
             <div class="wrapper">
                 <div class="calm__card" onclick="void(0)">
@@ -157,10 +159,9 @@
                 </div>
             </div>
         </section>
-
-        <!-- section therapy -->
+        <!-- fourth section therapy -->
         <section id="therapy" class="therapy">
-            <div class="therapy__section-heading">THERAPY</div>
+            <h2 class="therapy__section-heading">THERAPY</h2>
             <div class="wrapper">
                     <div class="therapy__offers-box">
                         <div class="therapy__offers-box__left"></div>
@@ -168,11 +169,9 @@
                         <div class="therapy__offers-box__right">
                             <h2 class="therapy__offers-box__right__head">low || 250$</h2>
                             <p class="therapy__offers-box__right__text">Accurate description of problem uses spec language dependes of level  ... Lorem ipsum dolor sit amet.</p>
-                            <button class="therapy__offers-box__right__btn">help me</button>
+                            a<button class="therapy__offers-box__right__btn">help me</button>
                         </div>
                     </div>
-
-                    
                     <div class="therapy__offers-box therapy__offers-box--middle">
                         <div class="therapy__offers-box__left"></div>
                         <img src="img/sections/therapy/levels/medium.jpg" alt="look from drone to people downstairs" class="therapy__offers-box__img">
@@ -182,7 +181,6 @@
                             <button class="therapy__offers-box__right__btn">help me</button>
                         </div>
                     </div>
-
                     <div class="therapy__offers-box therapy__offers-box--last">
                         <div class="therapy__offers-box__left"></div>
                         <img src="img/sections/therapy/levels/high.jpg" alt="Only one person which mean full of bad emotions" class="therapy__offers-box__img">
@@ -192,8 +190,26 @@
                             <button class="therapy__offers-box__right__btn">help me</button>
                         </div>
                     </div>
+            </div>
+        </section>
 
+        <!-- fifth section contact -->
+        <section class="contact" id="contact">
+            <div class="wrapper">
+                <h2 class="contact__section-heading">CONTACT</h2>
 
+                <form class="contact__box">
+                    <div class="contact__box-top">
+                        <label for="name" class="contact__box-top__label">Name and surname:</label>
+                        <input type="text" class="contact__box-top__input" id="name">
+                        <label for="email" class="contact__box-top__label">E-mail adress:</label>
+                        <input type="text" class="contact__box-top__input" id="email">
+                    </div>
+                    <label for="message" class="contact__box"></label>
+                    <textarea id="message" class="contact__box__textarea"></textarea>
+                    <button type="submit" class="contact__box__button"></button>
+
+                </form> 
 
 
 
@@ -206,8 +222,6 @@
 
             </div>
         </section>
-
-
 
     </main>
 

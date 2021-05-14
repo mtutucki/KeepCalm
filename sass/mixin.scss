@@ -8,13 +8,14 @@
 @mixin section-header {
     font-family: 'Train One', cursive;
     font-size: 3rem;
-    padding: .8em;
+    padding: .5em 0;
+    padding-bottom: .6em;
     text-align: center;
-    letter-spacing: 2px;
     font-weight: normal;
+    letter-spacing: 2px;
 }
 
-@mixin card  {
+@mixin card {
     background-size: cover;
     background-position: center;
 }
