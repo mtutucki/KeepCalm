@@ -15,8 +15,7 @@ html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     overflow-x: hidden;
-    scroll-padding-top: 30px;
-
+    scroll-padding-top: 7.9vh;
 }
 
 body {
@@ -44,7 +43,7 @@ body {
     a {
         text-decoration: none;
         color: $black;
-        font-size: 2.1rem;
+        font-size: 2rem;
         text-transform: uppercase;
     }
 
@@ -94,8 +93,8 @@ body {
         // links shows before user click burger button
         a {
             top: 8vh;
-            padding: .3em .2em;
-            font-size: 1.8rem;
+            padding: .3em .3em;
+            font-size: 1.6rem;
             transform: translateY(-300%);
             transition: transform .6s, color .3s;
         }
@@ -151,16 +150,15 @@ body {
     //h1 - KEEP CALM
     &__heading {
         padding: .2em 0;
-        font-size: 3.6rem;
+        font-size: 3rem;
         font-family: 'Train One', cursive;
         text-transform: uppercase;
-
     }
 
     // paragraph under g1
     &__text {
         padding-bottom: .4em;
-        font-size: 2.1rem;
+        font-size: 2rem;
         text-shadow: 1px 1px $black;
         text-align: center;
     }
@@ -174,7 +172,7 @@ body {
         color: $black;
         background: $white;
         border: 2px solid $dim-blue;
-        border-radius: 10px;
+        border-radius: 8px;
         text-transform: uppercase;
         letter-spacing: 2px;
         cursor: pointer;
@@ -205,13 +203,11 @@ body {
             color: $grey;
         }
 
-        // set scaleX t
+        // set scaleX to 1
         &:hover::before {
             transform: scaleX(1);
         }
     }
-
-
 }
 
 // main

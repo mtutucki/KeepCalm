@@ -8,20 +8,20 @@
   padding: 0 auto;
 }
 
-.nav .header__heading {
-  font-size: 8rem;
+.header__heading {
+  font-size: 5rem;
 }
 
-.nav .header__text {
-  font-size: 4rem;
+.header__text {
+  font-size: 3rem;
 }
 
-.nav .header__button {
+.header__button {
+  margin-top: .5em;
   font-size: 2rem;
-  padding: .5em 2.5em;
 }
 
-.nav main .keep__emotion {
+main .keep__emotion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,7 +33,7 @@
   margin-bottom: 4em;
 }
 
-.nav main .keep__emotion-img {
+main .keep__emotion-img {
   width: 40%;
   height: 40vh;
   background-attachment: scroll;
@@ -41,11 +41,11 @@
   margin: 0 1em;
 }
 
-.nav main .keep__emotion-img-head {
+main .keep__emotion-img-head {
   font-size: 8rem;
 }
 
-.nav main .keep__emotion-text {
+main .keep__emotion-text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,33 +60,33 @@
   font-size: 3rem;
 }
 
-.nav main .keep__emotion-text--proud {
+main .keep__emotion-text--proud {
   padding-right: 5rem;
   padding-left: .4em;
 }
 
-.nav main .keep__emotion--proud {
+main .keep__emotion--proud {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
 
-.nav main .hero-img {
+main .hero-img {
   height: 60vh;
 }
 
-.nav main .hero-img__title {
+main .hero-img__title {
   font-size: 8rem;
   padding: .5em;
 }
 
-.nav main .hero-img__text {
+main .hero-img__text {
   font-size: 3rem;
   padding: 1em;
 }
 
-.nav main .calm {
+main .calm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,7 +104,7 @@
           flex-direction: column;
 }
 
-.nav main .calm .wrapper {
+main .calm .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,31 +115,31 @@
           justify-content: center;
 }
 
-.nav main .calm__card {
+main .calm__card {
   margin: 1em;
   width: 30%;
   margin-bottom: 4.1rem;
 }
 
-.nav main .calm__card-front__head {
+main .calm__card-front__head {
   top: 1.2rem;
   font-size: 3rem;
 }
 
-.nav main .calm__card-front__more-info {
+main .calm__card-front__more-info {
   font-size: 2.4rem;
 }
 
-.nav main .calm__card-back__head {
+main .calm__card-back__head {
   top: 1.2rem;
   font-size: 3rem;
 }
 
-.nav main .calm__card-back__description {
+main .calm__card-back__description {
   font-size: 2rem;
 }
 
-.nav main .calm__card:hover hr {
+main .calm__card:hover hr {
   width: 75%;
 }
 /*# sourceMappingURL=large.css.map */

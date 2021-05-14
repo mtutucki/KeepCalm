@@ -17,7 +17,7 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  scroll-padding-top: 30px;
+  scroll-padding-top: 7.9vh;
 }
 
 body {
@@ -49,7 +49,7 @@ body {
 .nav a {
   text-decoration: none;
   color: #111111;
-  font-size: 2.1rem;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
@@ -109,8 +109,8 @@ body {
 
 .nav__links--mobile a {
   top: 8vh;
-  padding: .3em .2em;
-  font-size: 1.8rem;
+  padding: .3em .3em;
+  font-size: 1.6rem;
   -webkit-transform: translateY(-300%);
           transform: translateY(-300%);
   -webkit-transition: color .3s, -webkit-transform .6s;
@@ -188,14 +188,14 @@ body {
 
 .header__heading {
   padding: .2em 0;
-  font-size: 3.6rem;
+  font-size: 3rem;
   font-family: 'Train One', cursive;
   text-transform: uppercase;
 }
 
 .header__text {
   padding-bottom: .4em;
-  font-size: 2.1rem;
+  font-size: 2rem;
   text-shadow: 1px 1px #111111;
   text-align: center;
 }
@@ -208,7 +208,7 @@ body {
   color: #111111;
   background: #f6f5f5;
   border: 2px solid #276678;
-  border-radius: 10px;
+  border-radius: 8px;
   text-transform: uppercase;
   letter-spacing: 2px;
   cursor: pointer;
