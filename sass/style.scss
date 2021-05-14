@@ -216,7 +216,6 @@ main {
 
     // first section - keep
     .keep {
-
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -243,7 +242,7 @@ main {
                 width: 100%;
                 height: 50vh;
                 @include backgroundImage('../img/sections/keep/strong/strong-640.jpg');
-                border-radius: 5px;
+                border-radius: 8px;
                 transition: transform .5s;
 
                 // emotions text inside img
@@ -252,7 +251,7 @@ main {
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    font-size: 6rem;
+                    font-size: 5rem;
                     color: $grey;
                     font-weight: bold;
                     letter-spacing: 5px;
@@ -274,14 +273,13 @@ main {
 
             // text below img
             &-text {
+                display: flex;
+                width: 100%;
                 font-size: 2.1rem;
-                padding: 1em 1.3em;
+                padding: .7em;
+                padding-bottom: 1em;
                 justify-content: center;
                 align-items: center;
-
-                &--proud {
-                    margin-bottom: 1.5rem;
-                }
             }
         }
     }
@@ -508,37 +506,45 @@ main {
         }
     }
 
+    // therapy section
     .therapy {
         @include backgroundImage("../img/sections/therapy/background/therapy-bgc-640.jpg");
         background-attachment: fixed;
         display: flex;
         flex-direction: column;
 
+        // head
         &__section-heading {
             @include section-header;
         }
 
+        // box 
         &__offers-box {
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 90%;
-            margin: .8rem auto;
+            margin: 0 auto;
 
+            // second offer
             &--middle {
                 margin: 3rem auto;
             }
 
+            // last offer
             &--last {
                 margin-bottom: 3rem;
             }
 
+            // img inside box
             &__img {
+                height: 30vh;
                 width: 100%;
                 filter: grayscale(100%);
                 box-shadow: 1px 1px 10px rgba(0, 0, 0, .5);
             }
 
+            // text under photo - on right after 768px breakpoint
             &__right {
                 display: flex;
                 flex-direction: column;
@@ -547,6 +553,7 @@ main {
                 background-color: $grey;
                 color: $black;
 
+                // name of offer
                 &__head {
                     font-size: 3rem;
                     text-align: center;
@@ -554,11 +561,13 @@ main {
                     text-transform: uppercase;
                 }
 
+                // text inside offer
                 &__text {
                     font-size: 2rem;
                     padding: .45em;
                 }
 
+                // button to order
                 &__btn {
                     position: relative;
                     background-color: $light-blue;
@@ -573,8 +582,8 @@ main {
                     z-index: 10;
                     overflow: hidden;
                     transition: color .6s;
-
                 }
+
 
                 &__btn::before {
                     position: absolute;
@@ -597,18 +606,7 @@ main {
                 &__btn:hover {
                     color: $white;
                 }
-
-
-
-
             }
-
-
         }
-
-
     }
-
-
-
 }

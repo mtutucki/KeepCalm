@@ -274,10 +274,11 @@ main .keep {
 main .keep-section-heading {
   font-family: 'Train One', cursive;
   font-size: 3rem;
-  padding: .8em;
+  padding: .5em 0;
+  padding-bottom: .6em;
   text-align: center;
-  letter-spacing: 2px;
   font-weight: normal;
+  letter-spacing: 2px;
 }
 
 main .keep__emotion {
@@ -305,7 +306,7 @@ main .keep__emotion-img {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  border-radius: 5px;
+  border-radius: 8px;
   -webkit-transition: -webkit-transform .5s;
   transition: -webkit-transform .5s;
   transition: transform .5s;
@@ -318,7 +319,7 @@ main .keep__emotion-img-head {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 6rem;
+  font-size: 5rem;
   color: #d3e0ea;
   font-weight: bold;
   letter-spacing: 5px;
@@ -340,18 +341,19 @@ main .keep__emotion-img:hover {
 }
 
 main .keep__emotion-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   font-size: 2.1rem;
-  padding: 1em 1.3em;
+  padding: .7em;
+  padding-bottom: 1em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-main .keep__emotion-text--proud {
-  margin-bottom: 1.5rem;
 }
 
 main .hero-img {
@@ -416,10 +418,11 @@ main .calm {
 main .calm__section-heading {
   font-family: 'Train One', cursive;
   font-size: 3rem;
-  padding: .8em;
+  padding: .5em 0;
+  padding-bottom: .6em;
   text-align: center;
-  letter-spacing: 2px;
   font-weight: normal;
+  letter-spacing: 2px;
   color: #111111;
 }
 
@@ -628,10 +631,11 @@ main .therapy {
 main .therapy__section-heading {
   font-family: 'Train One', cursive;
   font-size: 3rem;
-  padding: .8em;
+  padding: .5em 0;
+  padding-bottom: .6em;
   text-align: center;
-  letter-spacing: 2px;
   font-weight: normal;
+  letter-spacing: 2px;
 }
 
 main .therapy__offers-box {
@@ -646,7 +650,7 @@ main .therapy__offers-box {
       -ms-flex-pack: center;
           justify-content: center;
   width: 90%;
-  margin: .8rem auto;
+  margin: 0 auto;
 }
 
 main .therapy__offers-box--middle {
@@ -658,6 +662,7 @@ main .therapy__offers-box--last {
 }
 
 main .therapy__offers-box__img {
+  height: 30vh;
   width: 100%;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);

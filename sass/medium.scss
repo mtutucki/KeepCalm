@@ -190,6 +190,7 @@ main {
         }
     }
 
+    // therapy section
     .therapy {
 
         &__section-heading {
@@ -199,10 +200,11 @@ main {
 
         &__offers-box {
             flex-direction: row;
-            width: 100%;
+            height: 25vh;
 
             &__img {
                 width: 40%;
+                height: 25vh;
             }
 
             &__right {

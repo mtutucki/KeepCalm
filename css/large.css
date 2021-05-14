@@ -102,6 +102,8 @@ main .calm {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
 }
 
 main .calm .wrapper {
@@ -141,5 +143,14 @@ main .calm__card-back__description {
 
 main .calm__card:hover hr {
   width: 75%;
+}
+
+main .therapy__offers-box {
+  height: 30vh;
+}
+
+main .therapy__offers-box__img {
+  width: 40%;
+  height: 30vh;
 }
 /*# sourceMappingURL=large.css.map */

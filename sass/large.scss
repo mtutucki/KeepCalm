@@ -5,7 +5,6 @@
 
 // reset padding to wrap max width to 1200px
 .nav {
-
     &__box {
         padding: 0 auto;
 
@@ -93,6 +92,7 @@ main {
         }
     }
 
+    // calm section
     .calm {
         display: flex;
         padding: 0.6rem;
@@ -100,6 +100,8 @@ main {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
 
         // set position of cards in tablet view
         .wrapper {
@@ -145,5 +147,19 @@ main {
                 width: 75%;
             }
         }
+    }
+
+    // therapy section
+    .therapy {
+        &__offers-box {
+            height: 30vh;
+
+            &__img {
+                width: 40%;
+                height: 30vh;
+            }
+
+        }
+
     }
 }
