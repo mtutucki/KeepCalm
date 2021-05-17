@@ -146,6 +146,7 @@ main .calm__card:hover hr {
 }
 
 main .therapy__offers-box {
+  width: 95%;
   height: 30vh;
 }
 
