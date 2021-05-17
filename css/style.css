@@ -742,6 +742,16 @@ main .therapy__offers-box__right__btn:hover {
   color: #f6f5f5;
 }
 
+main .therapy__offers-box__button {
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 main .contact {
   color: #111111;
 }
@@ -794,6 +804,24 @@ main .contact__box__textarea {
   margin: .2em 0;
 }
 
+main .contact__box__submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .contact__box__submit-text {
+  padding: .5em;
+  opacity: 0;
+}
+
 main .contact__box__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -801,8 +829,6 @@ main .contact__box__button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
   padding: .5em;
   margin-top: .3em;
   margin-bottom: 2rem;
