@@ -251,3 +251,26 @@ main {
     }
 
 }
+
+.footer {
+    @include backgroundImage('../img/footer/footer-mediun.jpg');
+
+    // box of footer
+    &__box {
+
+        // name of site
+        &__head {
+            font-size: 2rem;
+        }
+
+        // text under head
+        &__text {
+            font-size: 1.8rem;
+        }
+
+        // links to socials
+        &__links {
+            font-size: 1.8rem;
+        }
+    }
+}
