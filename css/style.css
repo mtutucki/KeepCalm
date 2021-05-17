@@ -741,4 +741,84 @@ main .therapy__offers-box__right__btn:hover::before {
 main .therapy__offers-box__right__btn:hover {
   color: #f6f5f5;
 }
+
+main .contact {
+  color: #111111;
+}
+
+main .contact__section-heading {
+  font-family: 'Train One', cursive;
+  font-size: 3rem;
+  padding: .5em 0;
+  padding-bottom: .6em;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+main .contact__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+}
+
+main .contact__box__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .contact__box__top__label {
+  margin: .2em 0;
+}
+
+main .contact__box__top__input {
+  margin: .2em 0;
+}
+
+main .contact__box__textarea {
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+  min-height: 150px;
+  margin: .2em 0;
+}
+
+main .contact__box__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: .3em;
+  padding: .5em;
+  width: 100%;
+  max-width: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+  background-color: #1687a7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+}
+
+main .contact__box__button:hover {
+  background-color: #276678;
+}
 /*# sourceMappingURL=style.css.map */

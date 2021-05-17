@@ -222,5 +222,32 @@ main {
 
     }
 
+    // contact
+    .contact {
+
+        &__section-heading {
+            @include section-header;
+            font-size: 5rem;
+        }
+
+        &__box {
+            font-size: 2rem;
+
+            &__top {
+                &__input {
+                    font-size: 1.8rem;
+                }
+            }
+
+            &__textarea {
+                font-size: 1.8rem;
+            }
+
+            &__button {
+                font-size: 1.8rem;
+            }
+
+        }
+    }
 
 }

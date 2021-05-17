@@ -609,4 +609,66 @@ main {
             }
         }
     }
+
+    // contact
+    .contact {
+        color: $black;
+
+
+        &__section-heading {
+            @include section-header;
+        }
+
+        &__box {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            margin: 0 auto;
+
+            &__top {
+                display: flex;
+                flex-direction: column;
+
+
+                &__label {
+                    margin: .2em 0;
+                }
+
+                &__input {
+                    margin: .2em 0;
+                }
+            }
+
+            &__textarea {
+                max-width: 100%;
+                min-width: 100%;
+                width: 100%;
+                min-height: 150px;
+                margin: .2em 0;
+            }
+
+            &__button {
+                display: flex;
+                align-self: flex-end;
+                margin-top: .3em;
+                padding: .5em;
+                width: 100%;
+                max-width: 100px;
+                justify-content: center;
+                border: none;
+                background-color: $light-blue;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 2rem;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color .3s;
+            }
+
+            &__button:hover {
+                background-color: $dim-blue;
+            }
+
+        }
+    }
 }
