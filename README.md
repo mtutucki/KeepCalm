@@ -11,8 +11,10 @@ It is a site for peaople struggling with problems. User can choose on the "help 
 When choose one data is transfered to contact message field. 
 
 ## Technologies
-I didn't want to use lot of a technologies.
-I used javascript and SASS preprocessor. 
+I didn't want to use lot of a technologies. <br /> 
+I used javascript and SASS preprocessor. <br /> 
+I used AOS for animation on scroll. 
+
 
 ## Samples
 Underline on buttons when hover <br /> 
