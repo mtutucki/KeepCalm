@@ -201,12 +201,18 @@ body {
         &:hover {
             border: 2px solid transparent;
             color: $grey;
+
         }
 
         // set scaleX to 1
         &:hover::before {
             transform: scaleX(1);
         }
+
+
+
+
+
     }
 }
 
@@ -695,6 +701,15 @@ main {
             &__button:hover {
                 background-color: $dim-blue;
             }
+
+            // button {
+            //     font-size: 1.6rem;
+            //     background: none;
+            //     border: none;
+            //     text-transform: uppercase;
+            //     text-decoration: none;
+            //     cursor: pointer;
+            // }
 
         }
     }
