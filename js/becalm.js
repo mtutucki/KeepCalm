@@ -12,6 +12,11 @@ const contactTextArea = document.body.querySelector(".contact__box__textarea");
 let contactTextAreaText;
 const contactSubmit = document.body.querySelector(".contact__box__button");
 const contactSubmitInfo = document.body.querySelector(".contact__box__submit-text");
+const contactName = document.body.querySelector(".contact-name-input");
+const contactEmail = document.body.querySelector(".contact-email-input");
+
+
+
 
 // this toggle css class to set nav visible on mobile devices
 const navBurgerBtnHandler = () => {
@@ -50,13 +55,31 @@ helpHigh.addEventListener("click", function () {
     contactTextArea.textContent += "Progress that I made myself: ";
 });
 
-contactSubmit.addEventListener("click", function() {
-    contactSubmitInfo.style.opacity = "1";
-    location.hash = "contact";
-})
 
-window.addEventListener("scroll", function(){
-    if (scrollY == 5){
-        location.hash = "header";
+
+const sumbitHandler = () =>  {
+    if (contactName.value == ""){
+        contactSubmitInfo.textContent = "Enter the full name, please";
+        contactSubmitInfo.style.opacity = "1";
+        contactSubmitInfo.style.color = "#1687a7";
     }
-})
+    else if (contactEmail.value == ""){
+        contactSubmitInfo.textContent = "Enter the email adress, please";
+        contactSubmitInfo.style.opacity = "1";
+        contactSubmitInfo.style.color = "#1687a7";
+    }
+    else if (contactTextArea.value == ""){
+        contactSubmitInfo.textContent = "Fill in the message field, please";
+        contactSubmitInfo.style.opacity = "1";
+        contactSubmitInfo.style.color = "#1687a7";
+    }
+    else if (contactName.value != "" && contactEmail.value != "" && contactTextArea.value != "")  {
+        contactSubmitInfo.textContent = "Thank You. We will contact you soon as possible.";
+        contactSubmitInfo.style.opacity = "1";
+        contactSubmitInfo.style.color = "rgb(17, 17, 17)";
+    }
+}
+
+contactSubmit.addEventListener("click", sumbitHandler);
+    
+

@@ -696,6 +696,14 @@ main {
                 background-color: $dim-blue;
             }
 
+            button {
+                font-size: 1.6rem;
+                background: none;
+                border: none;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+
         }
     }
 }
