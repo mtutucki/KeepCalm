@@ -16,6 +16,8 @@
     <!-- KEEP CALM text font import from google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Train+One&display=swap" rel="stylesheet">
+    <!-- AOS on scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- My CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" media="screen and (min-width:768px)" href="css/medium.css">
@@ -54,25 +56,25 @@
 
     <!-- HEADER -->
     <header id="header" class="header">
-        <h1 class="header__heading">keep calm</h1>
-        <p class="header__text">Always try to keep calm yourself</p>
-        <a href="#keep"><button class="header__button">keep</button></a>
+        <h1 data-aos="fade-down" data-aos-delay="600" class="header__heading">keep calm</h1>
+        <p data-aos="fade-down" data-aos-delay="200" class="header__text">Always try to keep calm yourself</p>
+        <a data-aos="zoom-in" data-aos-delay="1000" href="#keep"><button class="header__button">keep</button></a>
     </header>
 
     <!-- main -->
     <main>
         <!-- first section keep -->
-        <section class="keep" id="keep">
+        <section  class="keep" id="keep">
                 <div class="wrapper">
                     <h2 class="keep-section-heading">KEEP</h2>
-                    <div class="keep__emotion">
+                    <div data-aos="fade-up" data-aos-delay="100" class="keep__emotion">
                         <div class="keep__emotion-img">
                             <h3 class="keep__emotion-img-head">strong</h3>
                         </div>
                         <p class="keep__emotion-text ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sint
                             laboriosam, quod nam optio ipsa nulla omnis dolorem dicta cumque?</p>
                     </div>
-                    <div class="keep__emotion keep__emotion--proud">
+                    <div data-aos="fade-up" data-aos-delay="100" duration="180" class="keep__emotion keep__emotion--proud">
                         <div class="keep__emotion-img keep__emotion-img--proud ">
                             <h3 class="keep__emotion-img-head">proud</h3>
                         </div>
@@ -95,7 +97,7 @@
             <!-- wrapper for calm section -->
             <div class="wrapper">
                 <div class="calm__card" onclick="void(0)">
-                    <div class="calm__card-front calm__card-front--first">
+                    <div data-aos="fade-up" data-aos-delay="100" class="calm__card-front calm__card-front--first">
                         <h3 class="calm__card-front__head">PAIN</h3>
                         <p class="calm__card-front__more-info">TAP or MOVE CURSOR HERE</p>
                     </div>
@@ -115,7 +117,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="calm__card calm__card--second" onclick="void(0)">
+                <div data-aos="fade-up" data-aos-delay="100" class="calm__card calm__card--second" onclick="void(0)">
                     <div class="calm__card-front calm__card-front--second">
                         <h3 class="calm__card-front__head">FEAR</h3>
                         <p class="calm__card-front__more-info">TAP or MOVE CURSOR HERE</p>
@@ -136,7 +138,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="calm__card calm__card--third" onclick="void(0)">
+                <div data-aos="fade-up" data-aos-delay="100" class="calm__card calm__card--third" onclick="void(0)">
                     <div class="calm__card-front calm__card-front--third">
                         <h3 class="calm__card-front__head">LONELINESS</h3>
                         <p class="calm__card-front__more-info">TAP or MOVE CURSOR HERE</p>
@@ -163,7 +165,7 @@
         <section id="therapy" class="therapy">
             <h2 class="therapy__section-heading">THERAPY</h2>
             <div class="wrapper">
-                    <div class="therapy__offers-box">
+                    <div data-aos="fade-up" data-aos-delay="100" class="therapy__offers-box ">
                         <div class="therapy__offers-box__left"></div>
                         <img src="img/sections/therapy/levels/low.jpg" alt="a lot of people walking on a pier" class="therapy__offers-box__img">
                         <div class="therapy__offers-box__right">
@@ -172,7 +174,7 @@
                             <a href="#contact" class="therapy__offers-box__right__btn helpme-button-low"><button class="therapy__offers-box__button">help me</button></a>
                         </div>
                     </div>
-                    <div class="therapy__offers-box therapy__offers-box--middle">
+                    <div data-aos="fade-up" data-aos-delay="100" class="therapy__offers-box therapy__offers-box--middle">
                         <div class="therapy__offers-box__left"></div>
                         <img src="img/sections/therapy/levels/medium.jpg" alt="look from drone to people downstairs" class="therapy__offers-box__img">
                         <div class="therapy__offers-box__right">
@@ -181,7 +183,7 @@
                             <a href="#contact" class="therapy__offers-box__right__btn helpme-button-medium"><button class="therapy__offers-box__button">help me</button></a>
                         </div>
                     </div>
-                    <div class="therapy__offers-box therapy__offers-box--last">
+                    <div data-aos="fade-up" data-aos-delay="100" class="therapy__offers-box therapy__offers-box--last">
                         <div class="therapy__offers-box__left"></div>
                         <img src="img/sections/therapy/levels/high.jpg" alt="Only one person which mean full of bad emotions" class="therapy__offers-box__img">
                         <div class="therapy__offers-box__right">
@@ -192,12 +194,11 @@
                     </div>
             </div>
         </section>
-
         <!-- fifth section contact -->
         <section class="contact" id="contact">
             <div class="wrapper">
                 <h2 class="contact__section-heading">CONTACT</h2>
-                <form class="contact__box">
+                <form data-aos="fade-up" data-aos-delay="100" class="contact__box">
                     <div class="contact__box__top">
                         <label for="name" class="contact__box__top__label">Name and surname:</label>
                         <input type="text" placeholder="Jack Smith" class="contact__box__top__input contact-name-input" id="name">
@@ -208,7 +209,7 @@
                     <textarea placeholder="Tell us about your problem. If you choose one of the option above please tell us which one is it. " id="message" class="contact__box__textarea"></textarea>
                     <div class="contact__box__submit">
                         <span class="contact__box__submit-text">Thank you. We will contact you soon as possible</span>
-                        <a class="contact__box__button"><button>Sumbit</button></a>
+                        <button class="contact__box__button">submit</button>
                     </div>
                 </form> 
             </div>
@@ -234,7 +235,9 @@
         </div>
     </footer>
 
-
+    <!-- aos on scroll JS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/aos.js"></script>
     <!-- my js script -->
     <script src="js/becalm.js"></script>
 </body>
