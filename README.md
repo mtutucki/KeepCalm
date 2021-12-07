@@ -9,7 +9,7 @@ https://mtutucki.github.io/KeepCalm/
 * [Technologies](#technologies)
 
 ## About the project
-It' a site created for fun. 
+It' a site created for fun. Project is based on Flexbox.
 
 ## Technologies
 I used HTML, SASS and javascript.  <br /> 
